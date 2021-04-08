@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function takevalue()
+        {
+            var fname=document.getElementById("fullname").value;
+            var dateOfBirth=document.getElementById("dob").value;
+            var UserId=document.getElementById("uId").value;
+            var num=document.getElementById("n1").value;
+            var ps1=document.getElementById("p1").value;
+            var ps2=document.getElementById("p2").value;
+
+        var gender1=document.getElementById("r1").value;
+        var gender2=document.getElementById("r2").value;
+        var gender3=document.getElementById("r3").value;
+
+         var rd1=document.getElementById('r1').checked;
+         var rd2=document.getElementById('r2').checked;
+         var rd3=document.getElementById('r3').checked;
+       
+
+
+            //CHECKED BOX
+        var loc1=document.getElementById("l1").value;
+        var loc2=document.getElementById("l2").value;
+        var loc3=document.getElementById("l3").value;
+        
+         var chk1=document.getElementById('l1').checked;
+         var chk2=document.getElementById('l2').checked;
+         var chk3=document.getElementById('l3').checked;
+         
+       
+
+            //10 DIGIT PHONE NUMBER
+
+
+
+            document.write("YOUR INFO : <BR>"+"FIRST NAME : "+fname+"<br>");
+            document.write("date-Of-Birth : "+dateOfBirth+"<br>");
+            document.write("user : "+UserId+"<br>");   
+            document.write("Phone Number "+num+"<br>");
+
+
+
+
+              //GENDER FIND
+            if(rd1==true)
+          {
+            
+          document.write("Gender : "+gender1+"<br>");
+         }
+
+          else if(rd2==true)
+          {
+            
+          
+          document.write("Gender : "+gender2+"<br>");
+          }
+
+          else if(rd3==true){
+         
+        
+          document.write("Gender : "+gender3+"<br>");
+          }
+
+          else{
+            document.write("Gender : Not Selected"+"<br>")
+          }
+       
+
+       //LOCATION FIND
+          if(chk1==true && chk3==true && chk2==true)
+          {
+            
+          document.write("Location : "+loc1+", "+loc2+ ", "+loc3 +"<br>");
+         }
+
+          else if(chk1==true && chk2==true)
+          {
+            
+          
+          document.write("Location : "+loc1+", "+loc2+"<br>");
+          }
+
+         else if(chk2==true && chk3==true)
+         {
+        
+          document.write("Location : "+loc2+ ", "+loc3 +"<br>");
+          }
+
+          else if(chk1==true && chk3==true)
+         {
+        
+          document.write("Location : "+loc1+", "+loc3+"<br>");
+          }
+
+          else if( chk3==true)
+         {
+        
+          document.write("Location : "+loc3+"<br>");
+          }
+
+          else if(chk1==true)
+         {
+        
+          document.write("Location : "+loc1+"<br>");
+          }
+
+          else if(chk2==true)
+         {
+        
+          document.write("Location : "+loc2+"<br>");
+          }
+
+          else
+          {
+            document.write("Location : No Input"+"<br>");
+          }
+
+          //Password Check
+
+        if(ps1==ps2)
+        {
+          document.write("Registration Status : sucessfull");
+        }
+
+        else{
+          document.write("Registartion Status: unSucessfull");
+        }
+
+
+        }
+
+
+        
+        
+
+
+        </script>
+
+
+</head>
+<body>
+    
+        <form >
+            
+                    <input onkeypress="return /[a-z]/i.test(event.key)" id="fullname"
+                    placeholder="Enter Full Name">
+                
+                    <input type="date" id="dob" placeholder="Date of Birth">
+                
+                    <input type="text" id="uId" placeholder="username">
+                
+                        <input type="password" id="p1" placeholder="password">
+                   
+                        <input type="text" id="p2" placeholder="confirm password">
+                   
+                  
+                      
+                        <input type="radio" id="r1" name="gender4"  value="male" >Male
+                        <input type="radio" id="r2" name="gender4"  value="female">Female
+                        <input type="radio" id="r3" name="gender4" value="other">Other
+                        
+
+                                <input type="checkbox" id="l1" name="kol" value="KOLKATA">KOLKATA
+                                <input type="checkbox" id="l2" name="jp" value="JAIPUR">JAIPUR
+                                <input type="checkbox" id="l3" name="blr" value="BANGALORE">BANGALORE
+
+<!--
+
+                                <select name="dropDown" id="dp">
+                                  <option value="Deposit">Deposit</option>
+                                  <option value="Withdraw">Withdraw</option>
+                                </select> -->
+
+                                <input name="phoneNumber" id="n1" placeholder="Enter Mobile Number"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number"
+    maxlength = "10"
+ />
+
+               
+                <!-- NOW WE NEED TO ADD SUBMIT BUTTON -->
+            
+                    <input type="submit" onclick="takevalue()">
+                 
+        </form>
+    
+
+</body>
+</html>
